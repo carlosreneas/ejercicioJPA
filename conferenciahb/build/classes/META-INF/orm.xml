@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+	<entity class="model.Participante"> 
+      <table name="participante" />
+      <named-query name="list">
+        <query>select p from Participante p</query>
+      </named-query>       
+      <attributes>
+        <id name="id">
+          <generated-value strategy="AUTO" />
+        </id>
+        <basic name="nombre">
+          <column name="nombre" nullable="false"/>
+        </basic>
+      </attributes>
+    </entity>    
+
+</entity-mappings>
